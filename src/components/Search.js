@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Search = () => {
     //sets useState
     const [term, setTerm] = useState('cats');
 
-    console.log("I run with every render.");
 
     useEffect(()=>{
-        console.log('using useEffect. I run at every render and at initial render');
-    }, );
+        const search = async () => {
+            await axios.get();
+        };
+        search();
+        // (async () => {
+        //     await axios.get();
+        // })(); //wtf strange.
+        
+    }, [term]);
 
     return (
         <div>
