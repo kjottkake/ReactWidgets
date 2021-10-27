@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Search = () => {
     //sets useState
     const [term, setTerm] = useState('cats');
 
+    console.log("I run with every render.");
 
+    useEffect(()=>{
+        console.log('using useEffect. I only run once.');
+    }, []);
 
     return (
         <div>
