@@ -7,8 +7,8 @@ const Search = () => {
     console.log("I run with every render.");
 
     useEffect(()=>{
-        console.log('using useEffect. I only run once.');
-    }, []);
+        console.log('using useEffect. I run at every render and at initial render');
+    }, );
 
     return (
         <div>
